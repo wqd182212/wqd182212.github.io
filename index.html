@@ -17,25 +17,43 @@
         }
         @keyframes wqd {
             0% {
-                background-color: #4ecdc4;
+                background-color: #12c2e9;
+            }
+            50% {
+                background-color: #c471ed;
             }
             100% {
-                background-color: #556270;
+                background-color: #f64f59;
             }
         }
         section {
             height: 100vh;
-            background-color: #333;
+            background-color: white;
             box-sizing: border-box;
             padding: 24px;
             background-clip: content-box;
             scroll-snap-align: start;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .title {
+            font-size: 60px;
+        }
+        .title span {
+            animation: wqd 5s linear infinite alternate;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: 900;
         }
     </style>
 </head>
 <body>
     <div class="wqd">
-        <section></section>
+        <section>
+            <div class="title">你不知道的<span>CSS</span></div>
+        </section>
         <section></section>
         <section></section>
     </div>
