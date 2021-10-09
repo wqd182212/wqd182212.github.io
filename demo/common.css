@@ -1,0 +1,27 @@
+body, pre {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+body {
+    height: calc(100vh - 24px * 2);
+    padding: 24px;
+}
+.empty {
+    flex: 1;
+}
+.right {
+    flex: 1;
+}
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+pre code.hljs {
+    padding: 0 1em;
+}
+code {
+    padding: 0 initial;
+    width: 100%;
+}
