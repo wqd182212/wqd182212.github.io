@@ -31,7 +31,7 @@ code {
     border-radius: 8px;
     pointer-events: none;
 }
-code::before {
+.copy::before {
     content: url(../svg/copy.svg);
     right: 8px;
     top: 8px;
@@ -41,7 +41,23 @@ code::before {
     border-radius: 4px;
     justify-content: center;
     align-items: center;
-    background-color: #c471ed;
+    background-color: #0f3443;
+    color: white;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+}
+.check::before {
+    content: url(../svg/check.svg);
+    right: 8px;
+    top: 8px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    background-color: #34e89e;
     color: white;
     position: absolute;
     cursor: pointer;
