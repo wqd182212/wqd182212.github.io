@@ -83,5 +83,21 @@
     <div class="right">
         <div class="pink-heart"></div>
     </div>
+    <script>
+        // 获取所有标签为code的dom
+        const codeList = document.querySelectorAll("code");
+        for (let i of codeList) {
+            i.addEventListener("click", () => {
+                // 创建虚拟input
+                const input = document.createElement("input");
+                document.body.appendChild(input);
+                input.value = i.innerText;
+                input.select();
+                document.execCommand("copy");
+                // 隐藏input
+                input.style.display = "none";
+            });
+        }
+    </script>
 </body>
 </html>

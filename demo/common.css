@@ -27,4 +27,23 @@ pre {
 code {
     padding: 0 initial;
     width: 100%;
+    position: relative;
+    border-radius: 8px;
+    pointer-events: none;
+}
+code::before {
+    content: url(../svg/copy.svg);
+    right: 8px;
+    top: 8px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    background-color: #c471ed;
+    color: white;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
 }
