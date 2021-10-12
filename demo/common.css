@@ -7,19 +7,15 @@ body {
     height: calc(100vh - 16px * 2);
     padding: 16px;
 }
-.empty {
-    flex: 1;
-}
 .right {
     flex: 1;
 }
 .left {
-    flex: 1;
     display: flex;
     flex-direction: column;
 }
 pre code.hljs {
-    padding: 0 1em;
+    padding: 0 calc(1em + 24px) 0 1em;
 }
 pre {
     margin-bottom: 8px;
@@ -40,7 +36,8 @@ code {
     display: flex;
     border-radius: 4px;
     justify-content: center;
-    align-items: center;
+    padding-top: 4px;
+    box-sizing: border-box;
     background-color: #0f3443;
     color: white;
     position: absolute;
@@ -56,7 +53,8 @@ code {
     display: flex;
     border-radius: 4px;
     justify-content: center;
-    align-items: center;
+    padding-top: 4px;
+    box-sizing: border-box;
     background-color: #34e89e;
     color: white;
     position: absolute;
