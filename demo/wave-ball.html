@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../highlight/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet" href="./common.css">
+    <script src="../highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <title>wave-ball</title>
+</head>
+<body>
+    <style>
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .wave-ball {
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            background-color: #6be585;
+            border-radius: 50%;
+            position: relative;
+            z-index: -1;
+        }
+        .wave-ball::before {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: #1e1e1e;
+            opacity: .5;
+            bottom: 100px;
+            left: -100px;
+            border-radius: 45%;
+            animation: rotate 7.5s linear infinite;
+        }
+        .wave-ball::after {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: #1e1e1e;
+            opacity: .5;
+            bottom: 100px;
+            left: -100px;
+            border-radius: 45%;
+            animation: rotate 12.5s linear infinite;
+        }
+    </style>
+    <div class="left">
+        <pre>
+            <code class="copy">
+&lt;div class="wave-ball"&gt;&lt;/div&gt;
+            </code>
+        </pre>
+        <pre>
+            <code class="copy">
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.wave-ball {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: #6be585;
+    border-radius: 50%;
+    position: relative;
+    z-index: -1;
+}
+.wave-ball::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #1e1e1e;
+    opacity: .5;
+    bottom: 100px;
+    left: -100px;
+    border-radius: 45%;
+    animation: rotate 7.5s linear infinite;
+}
+.wave-ball::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #1e1e1e;
+    opacity: .5;
+    bottom: 100px;
+    left: -100px;
+    border-radius: 45%;
+    animation: rotate 12.5s linear infinite;
+}
+            </code>
+        </pre>
+    </div>
+    <div class="right">
+        <div class="wave-ball"></div>
+    </div>
+    <script src="./copy.js"></script>
+</body>
+</html>
