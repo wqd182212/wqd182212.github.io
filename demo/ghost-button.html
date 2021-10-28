@@ -13,51 +13,93 @@
 <body>
     <style>
         .ghost-button {
-            background-color: #6be585;
             border: 8px solid #6be585;
             padding: .5em 1em;
             font-weight: 900;
             display: inline-block;
+            cursor: pointer;
         }
         .outer {
+            color: #6be585;
             font-size: 2em;
             margin: auto;
             position: relative;
             left: 50%;
             transform: translateX(-50%);
+            box-shadow: 8px 8px rgba(107, 229, 133, .25);
+            transition: box-shadow .25s linear;
         }
-        /* .outer:hover {
-            clip-path: inset(0 0 0 0);
-        } */
         .inner {
-            background-color: #1e1e1e;
-            color: #6be585;
+            background-color: #6be585;
+            color: #1e1e1e;
             position: absolute;
             left: -8px;
             right: -8px;
             top: -8px;
-            clip-path: inset(0 0 0 0);
-            transition: clip-path 1s linear;
+            clip-path: inset(0 100% 0 0);
+            transition: clip-path .25s linear;
         }
-        .inner:hover {
-            clip-path: inset(0 0 0 100%);
+        .outer:hover .inner {
+            clip-path: inset(0 0 0 0);
+        }
+        .outer:hover {
+            box-shadow: none;
         }
     </style>
     <div class="left">
         <pre>
             <code class="copy">
+&lt;div class="ghost-button outer"&gt;
+    ghost-button
+    &lt;div class="ghost-button inner"&gt;
+        ghost-button
+    &lt;/div&gt;
+&lt;/div&gt;
             </code>
         </pre>
         <pre>
             <code class="copy">
+.ghost-button {
+    border: 8px solid #6be585;
+    padding: .5em 1em;
+    font-weight: 900;
+    display: inline-block;
+    cursor: pointer;
+}
+.outer {
+    color: #6be585;
+    font-size: 2em;
+    margin: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 8px 8px rgba(107, 229, 133, .25);
+    transition: box-shadow .25s linear;
+}
+.inner {
+    background-color: #6be585;
+    color: #1e1e1e;
+    position: absolute;
+    left: -8px;
+    right: -8px;
+    top: -8px;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path .25s linear;
+}
+.outer:hover .inner {
+    clip-path: inset(0 0 0 0);
+}
+.outer:hover {
+    box-shadow: none;
+}
             </code>
         </pre>
     </div>
     <div class="right">
         <div class="ghost-button outer">
-            outer
+            ghost button
             <div class="ghost-button inner">
-                inner
+                ghost button
             </div>
         </div>
     </div>
