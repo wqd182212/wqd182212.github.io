@@ -15,15 +15,10 @@ body {
     flex-direction: column;
 }
 pre code.hljs {
-    padding: 0 16px 0 40px;
+    padding: 0 calc(1em + 24px) 0 1em;
 }
 pre {
     margin-bottom: 8px;
-    max-height: calc((100vh - 8px * 2) / 2);
-    overflow: auto;
-    display: flex;
-    align-items: flex-start;
-    border-radius: 8px;
 }
 code {
     padding: 0 initial;
@@ -34,6 +29,8 @@ code {
 }
 .copy::before {
     content: url(../svg/copy.svg);
+    right: 8px;
+    top: 8px;
     width: 24px;
     height: 24px;
     display: flex;
@@ -43,13 +40,14 @@ code {
     box-sizing: border-box;
     background-color: #dd3e54;
     color: white;
-    position: fixed;
-    margin: 8px 0 0 -32px;
+    position: absolute;
     cursor: pointer;
     pointer-events: auto;
 }
 .check::before {
     content: url(../svg/check.svg);
+    right: 8px;
+    top: 8px;
     width: 24px;
     height: 24px;
     display: flex;
@@ -59,8 +57,7 @@ code {
     box-sizing: border-box;
     background-color: #6be585;
     color: white;
-    position: fixed;
-    margin: 8px 0 0 -32px;
+    position: absolute;
     cursor: pointer;
     pointer-events: auto;
 }
