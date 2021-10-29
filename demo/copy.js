@@ -16,8 +16,9 @@ for (let i of codeList) {
         input.value = (i.innerText).trim();
         input.select();
         document.execCommand("copy");
-        // 隐藏input
-        input.style.display = "none";
+        // 删除用于复制功能的textarea的dom
+        const textareaDom = document.querySelector("textarea");
+        textareaDom.remove();
         i.className = i.className.replace("copy", "check");
         setTimeout(() => recover(i), 1000);
     });
