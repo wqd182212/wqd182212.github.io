@@ -15,11 +15,33 @@
         .macbook {
             display: flex;
         }
+        .macbook div {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: margin .125s;
+        }
         img {
             background-color: white;
-            padding: 1em;
-            border-radius: 1em;
-            margin-left: .5em;
+            width: 40px;
+            height: 40px;
+            transition: width .125s,
+                        height .125s;
+            border-radius: 16px;
+            padding: 8px;
+            cursor: pointer;
+            box-shadow: inset 8px 8px 16px #808080,
+                        inset -8px -8px 16px #ffffff;
+        }
+        div:hover > img {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 16px;
+        }
+        .macbook div:hover {
+            margin: 0 8px;
         }
     </style>
     <div class="left">
@@ -34,13 +56,27 @@
     </div>
     <div class="right">
         <div class="macbook">
-            <img src="../svg/gitlab.svg" alt="">
-            <img src="../svg/twitter.svg" alt="">
-            <img src="../svg/figma.svg" alt="">
-            <img src="../svg/chrome.svg" alt="">
-            <img src="../svg/codepen.svg" alt="">
-            <img src="../svg/facebook.svg" alt="">
-            <img src="../svg/github.svg" alt="">
+            <div>
+                <img src="../svg/gitlab.svg" alt="">
+            </div>
+            <div>
+                <img src="../svg/twitter.svg" alt="">
+            </div>
+            <div>
+                <img src="../svg/figma.svg" alt="">
+            </div>
+            <div>
+                <img src="../svg/chrome.svg" alt="">
+            </div>
+            <div>
+                <img src="../svg/codepen.svg" alt="">
+            </div>
+            <div>
+                <img src="../svg/facebook.svg" alt="">
+            </div>
+            <div>
+                <img src="../svg/github.svg" alt="">
+            </div>
         </div>
     </div>
     <script src="./copy.js"></script>
