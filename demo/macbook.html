@@ -16,41 +16,67 @@
             display: flex;
         }
         .macbook div {
-            width: 64px;
-            height: 64px;
+            padding: 4px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            transition: margin .125s;
         }
         img {
             background-color: white;
             width: 40px;
             height: 40px;
-            transition: width .125s,
-                        height .125s;
-            border-radius: 16px;
+            transition: width 100ms,
+                        height 100ms,
+                        margin-bottom 100ms;
+            border-radius: 25%;
             padding: 8px;
             cursor: pointer;
-            box-shadow: inset 8px 8px 16px #808080,
-                        inset -8px -8px 16px #ffffff;
+            box-shadow: inset 8px 8px 8px #808080,
+                        inset -8px -8px 8px #ffffff;
         }
         div:hover > img {
             width: 56px;
             height: 56px;
             margin-bottom: 16px;
         }
-        .macbook div:hover {
-            margin: 0 8px;
-        }
     </style>
     <div class="left">
         <pre>
             <code class="copy">
+&lt;div class="macbook"&gt;
+    &lt;div&gt;
+        &lt;img src="../svg/gitlab.svg" alt=""&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
             </code>
         </pre>
         <pre>
             <code class="copy">
+.macbook {
+    display: flex;
+}
+.macbook div {
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+img {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    transition: width 100ms,
+                height 100ms,
+                margin-bottom 100ms;
+    border-radius: 25%;
+    padding: 8px;
+    cursor: pointer;
+    box-shadow: inset 8px 8px 8px #808080,
+                inset -8px -8px 8px #ffffff;
+}
+div:hover > img {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 16px;
+}
             </code>
         </pre>
     </div>
